@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.kidsworld.kidsplayed.MainActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Here I can  Learn"
+        android:fontFamily="cursive"
+        android:gravity="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="30dp"
+        android:id="@+id/textView" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="300dp"
+            android:layout_weight="1.80">
+            <LinearLayout
+                android:id="@+id/first"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:onClick="alphabate"
+                    android:id="@+id/alphabet"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/alphabet" />
+
+                <ImageView
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/matha"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:src="@drawable/numeric" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/first"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+                <ImageView
+                    android:id="@+id/numeric"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/onetwo" />
+
+                <ImageView
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/imageView2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/randommath" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2.2">
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="500dp"
+                android:layout_height="250dp"
+                android:src="@drawable/gif"
+                />
+
+    </RelativeLayout>
+</LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

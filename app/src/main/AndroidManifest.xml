@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.kidsworld.kidsplayed">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,9 +21,25 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Alphabate"
+            android:name=".OnlyAlphabhet.Alphabate"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
             android:screenOrientation="landscape" />
-        <activity android:name=".Numeric"></activity>
+        <activity
+            android:name=".Drawing.Drawing"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TwoTextOneImage.SwipTwoTextOneImg"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".OneTextOneImage.SwipOnetextOneImage"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
     </application>
 
 </manifest>
